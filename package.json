@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "dev": "vite",
+  "build": "node ./node_modules/vite/bin/vite.js build",
+  "preview": "vite preview"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
