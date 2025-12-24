@@ -1,0 +1,86 @@
+
+import type { Question } from './types.ts';
+import { QuestionType } from './types.ts';
+
+export const AWS_QUESTION_LIBRARY: Question[] = [
+  {
+    text: 'What AWS service provides a managed relational database?',
+    options: ['DynamoDB', 'RDS', 'S3', 'EC2'],
+    correctAnswerIndex: 1,
+    timeLimit: 20,
+    technology: 'AWS',
+    skill: 'Databases',
+  },
+  {
+    text: 'Which service is used for scalable object storage?',
+    options: ['EBS', 'S3', 'Glacier', 'Storage Gateway'],
+    correctAnswerIndex: 1,
+    timeLimit: 20,
+    technology: 'AWS',
+    skill: 'Storage',
+  },
+  {
+    text: 'What service offers serverless computing?',
+    options: ['EC2', 'Elastic Beanstalk', 'Lambda', 'Lightsail'],
+    correctAnswerIndex: 2,
+    timeLimit: 20,
+    technology: 'AWS',
+    skill: 'Compute',
+  },
+  {
+    text: 'Which service helps in deploying and scaling web applications?',
+    options: ['CloudFormation', 'Elastic Beanstalk', 'CodeDeploy', 'OpsWorks'],
+    correctAnswerIndex: 1,
+    timeLimit: 30,
+    technology: 'AWS',
+    skill: 'Deployment',
+  },
+  {
+    text: 'What is the AWS service for content delivery network?',
+    options: ['Direct Connect', 'Route 53', 'VPC', 'CloudFront'],
+    correctAnswerIndex: 3,
+    timeLimit: 20,
+    technology: 'AWS',
+    skill: 'Networking',
+  },
+  {
+    text: 'Which AWS service provides a virtual private cloud?',
+    options: ['VPC', 'VPN', 'Direct Connect', 'PrivateLink'],
+    correctAnswerIndex: 0,
+    timeLimit: 20,
+    technology: 'AWS',
+    skill: 'Networking',
+  },
+  {
+    text: 'What is the service for managed NoSQL database?',
+    options: ['RDS', 'Aurora', 'DynamoDB', 'Redshift'],
+    correctAnswerIndex: 2,
+    timeLimit: 20,
+    technology: 'AWS',
+    skill: 'Databases',
+  },
+  {
+    text: 'Which service is for identity and access management?',
+    options: ['Cognito', 'IAM', 'Secrets Manager', 'GuardDuty'],
+    correctAnswerIndex: 1,
+    timeLimit: 20,
+    technology: 'AWS',
+    skill: 'Security',
+  },
+  {
+    text: 'What service is used for monitoring AWS resources?',
+    options: ['CloudTrail', 'CloudWatch', 'X-Ray', 'Trusted Advisor'],
+    correctAnswerIndex: 1,
+    timeLimit: 20,
+    technology: 'AWS',
+    skill: 'Monitoring',
+  },
+  {
+    text: 'Which service provides scalable DNS and domain name registration?',
+    options: ['CloudFront', 'Route 53', 'ELB', 'VPC'],
+    correctAnswerIndex: 1,
+    timeLimit: 20,
+    technology: 'AWS',
+    skill: 'Networking',
+  },
+].map(q => ({...q, id: crypto.randomUUID(), type: QuestionType.MCQ }));

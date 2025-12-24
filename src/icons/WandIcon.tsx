@@ -1,0 +1,3 @@
+import React from 'react';
+
+export const WandIcon = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2"><path d="M10.362 3.691a.75.75 0 0 1 .595 1.142 9 9 0 0 0-3.322 3.322.75.75 0 1 1-1.142-.595A10.5 10.5 0 0 1 10.362 3.691ZM15 7.5a.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" /><path fillRule="evenodd" d="M4.044 4.044a10.5 10.5 0 1 1 11.912 11.912A10.5 10.5 0 0 1 4.044 4.044ZM10.5 3a.75.75 0 0 0-1.06.04L4.155 8.326a.75.75 0 0 0 1.06 1.06L9.5 5.101V12a.75.75 0 0 0 1.5 0V5.101l4.285 4.285a.75.75 0 1 0 1.06-1.06L11.56.04a.75.75 0 0 0-1.06 0Z" clipRule="evenodd" /></svg>;

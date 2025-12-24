@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizumi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'clan-battle-bg': '#202A44',
+              'gl-orange': {
+                '50': '#FFF5F0',
+                '100': '#FEEAE0',
+                '200': '#FDD9C7',
+                '300': '#FCC4A9',
+                '400': '#FAA985',
+                '500': '#F37037',
+                '600': '#E8632A',
+                '700': '#D9561F',
+                '800': '#B5481A',
+                '900': '#933B15',
+              }
+            },
+            fontFamily: {
+              sans: ['Quicksand', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-500: #F37037;
+        --primary-600: #E8632A;
+        --primary-700: #D9561F;
+        --background: #F9FAFB;
+        --text-primary: #1E293B;
+        --text-secondary: #64748B;
+      }
+      body { background-color: var(--background); color: var(--text-primary); font-family: 'Quicksand', sans-serif; overflow-x: hidden; }
+      .background-shapes { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
+      .background-shapes::before, .background-shapes::after { content: ''; position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.15; }
+      .background-shapes::before { width: 400px; height: 400px; background-color: #FAA985; top: -100px; left: -100px; animation: move-blob-1 20s infinite alternate ease-in-out; }
+      .background-shapes::after { width: 500px; height: 500px; background-color: #F472B6; bottom: -150px; right: -150px; animation: move-blob-2 25s infinite alternate ease-in-out; }
+      @keyframes move-blob-1 { from { transform: translate(-50px, -50px) scale(1); } to { transform: translate(50px, 100px) scale(1.2); } }
+      @keyframes move-blob-2 { from { transform: translate(50px, 50px) scale(1.2); } to { transform: translate(-50px, -100px) scale(1); } }
+      @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes slide-in-up { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+      @keyframes pop-in { 0% { transform: scale(0.5); opacity: 0; } 70% { transform: scale(1.1); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
+      .animate-fade-in { animation: fade-in 0.5s ease-in-out forwards; }
+      .animate-slide-in-up { animation: slide-in-up 0.5s ease-in-out forwards; }
+      .animate-pop-in { animation: pop-in 0.5s ease-out forwards; }
+      .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@7.1.1",
+    "@google/genai": "https://esm.sh/@google/genai@0.21.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.47.10",
+    "@/": "./",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "firebase/": "https://esm.sh/firebase@^12.7.0/"
+  }
+}
+</script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
