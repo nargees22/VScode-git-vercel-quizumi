@@ -1,17 +1,17 @@
 import React from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import { Header } from './components/Header.tsx';
-import { Footer } from './components/Footer.tsx';
-import HomePage from './pages/HomePage.tsx';
-import CreateQuizPage from './pages/CreateQuizPage.tsx';
-import JoinQuizPage from './pages/JoinQuizPage.tsx';
-import LobbyPage from './pages/LobbyPage.tsx';
-import PlayerLobby from './pages/PlayerLobby.tsx';
-import QuizHostPage from './pages/QuizHostPage.tsx';
-import QuizPlayerPage from './pages/QuizPlayerPage.tsx';
-import LeaderboardPage from './pages/LeaderboardPage.tsx';
-import PerformanceReportPage from './pages/PerformanceReportPage.tsx';
+import { Header } from './src/components/Header';
+import { Footer } from './src/components/Footer';
+import HomePage from './src/pages/HomePage';
+import CreateQuizPage from './src/pages/CreateQuizPage';
+import JoinQuizPage from './src/pages/JoinQuizPage';
+import LobbyPage from './src/pages/LobbyPage';
+import PlayerLobby from './src/pages/PlayerLobby';
+import QuizHostPage from './src/pages/QuizHostPage';
+import QuizPlayerPage from './src/pages/QuizPlayerPage';
+import LeaderboardPage from './src/pages/LeaderboardPage';
+import PerformanceReportPage from './src/pages/PerformanceReportPage';
 
 const App = () => {
   return (
